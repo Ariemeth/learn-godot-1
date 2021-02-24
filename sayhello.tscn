@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sayhello.gd" type="Script" id=1]
+[ext_resource path="res://Label2.gd" type="Script" id=2]
+
+[node name="Panel" type="Panel"]
+margin_left = 22.0
+margin_top = 21.0
+margin_right = 303.0
+margin_bottom = 187.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 81.0
+margin_top = 23.0
+margin_right = 191.0
+margin_bottom = 37.0
+text = "This is a label"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 81.0
+margin_top = 79.8232
+margin_right = 191.0
+margin_bottom = 134.823
+text = "Press Me"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 81.0
+margin_top = 57.0
+margin_right = 191.0
+margin_bottom = 71.0
+text = "blah"
+align = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
